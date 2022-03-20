@@ -1,0 +1,15 @@
+<launch>
+
+  
+  <node pkg="transform_t265" type="transform_t265" name="transform_t265" output="screen">
+
+ 	  <param name="sub_topic" value="/camera/odom/sample" type="str" />
+ 	  <param name="pub_topic" value="t265_camera/path" type="str" />
+	  <param name="is_save_path" value="true" type="bool" />
+	  <param name="save_path" value="$(find transform_t265)/t265_path.txt" type="str" />
+	  <param name="save_model" value="tum" type="str" /> 
+
+ 	  <param name="fixed_frame_id" value="global" type="str" />
+ 	  <param name="child_frame_id" value="odom" type="str" />
+  </node>
+</launch>
